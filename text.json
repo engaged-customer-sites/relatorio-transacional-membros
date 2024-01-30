@@ -1,0 +1,44 @@
+{
+  "type": "CREDIT_CARD_PAYABLE_PAYMENT",
+  "balanceOperation": {
+    "id": "11908651471",
+    "amount": 250,
+    "feeAmount": 0,
+    "createdAt": "2024-01-12T03:16:29.698Z"
+  },
+  "payment": {
+    "_id": "6578a29e80b77800080880cf",
+    "amount": 500,
+    "user": {
+      "_id": "618bda71a1a62e000934d930",
+      "name": "Vini",
+      "email": "vms@engaged.com.br",
+      "phoneNumber": "+5541988328862"
+    },
+    "userPaymentProfile": {
+      "name": "Vinicius Test 27Nov",
+      "address": {
+        "zipcode": "80320-290",
+        "country": "BR",
+        "city": "Cidade AQUI",
+        "state": "PR",
+        "neighborhood": "Bairro aqui",
+        "street": "Nome Logradouro",
+        "number": "123",
+        "complement": "Complemento aqui"
+      },
+      "taxIds": [
+        {
+          "type": "BR_CPF",
+          "value": "09344509948"
+        }
+      ]
+    }
+  },
+  "payable": {
+    "amount": 250,
+    "feeAmount": 0,
+    "anticipationFeeAmount": null,
+    "installment": 1
+  }
+}

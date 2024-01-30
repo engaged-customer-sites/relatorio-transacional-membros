@@ -1,0 +1,89 @@
+query adminFetchRecipientBalanceOperations {
+  adminFetchRecipientBalanceOperations(
+    startDate: "2023-01-01T03:00:00.000Z"
+    endDate: "2024-01-25T02:59:59.999Z"
+    organizationId: "641c81c299a89600089a067f"
+    paginationArgs: { limit: 20, page: 1 }
+    recipientId: "64affa20e1f96c000809015f"
+  ) {
+    results {
+      type
+      balanceOperation {
+        id
+        amount
+        feeAmount
+        createdAt
+      }
+      ... on PixPaymentOperation {
+        payment {
+          _id
+        }
+      }
+      ... on PixRefundOperation {
+        payment {
+          _id
+        }
+      }
+      ... on BankSlipPaymentOperation {
+        payment {
+          _id
+        }
+      }
+      ... on BankSlipRefundOperation {
+        payment {
+          _id
+        }
+      }
+      ... on BankSlipRefundFeeOperation {
+        payment {
+          _id
+        }
+      }
+      ... on BankSlipRefundReversalOperation {
+        payment {
+          _id
+        }
+      }
+      ... on CreditCardAnticipatedPayablePaymentOperation {
+        payment {
+          _id
+        }
+        payable {
+          installment
+        }
+      }
+      ... on CreditCardPayablePaymentOperation {
+        payment {
+          _id
+        }
+        payable {
+          installment
+        }
+      }
+      ... on CreditCardPayableRefundOperation {
+        payment {
+          _id
+        }
+        payable {
+          installment
+        }
+      }
+      ... on CreditCardPayableChargebackOperation {
+        payment {
+          _id
+        }
+        payable {
+          installment
+        }
+      }
+      ... on CreditCardPayableChargebackRefundOperation {
+        payment {
+          _id
+        }
+        payable {
+          installment
+        }
+      }
+    }
+  }
+}
